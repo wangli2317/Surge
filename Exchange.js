@@ -6,7 +6,7 @@
  * 2. 设置保留几位小数。
  */
 
-const base = "EUR"; // 基准货币，可以改成其他币种
+const base = "CNY"; // 基准货币，可以改成其他币种
 const digits = 2; // 保留几位有效数字
 
 const $ = API("exchange");
@@ -28,23 +28,16 @@ $.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=3d08ca4e5e
         const data = JSON.parse(response.body);
         const source = currencyNames[base];
         const cnySource = currencyNames["CNY"];
-    
+        const cnyRate = parseFloat(data.rates["CNY"]);
         const info = Object.keys(currencyNames).reduce((accumulator, key) => {
             let line = "";
             if (key !== base && data.rates.hasOwnProperty(key)) {
                 const rate = parseFloat(data.rates[key]);
                 const target = currencyNames[key];
-                let q = parseFloat(data.rates["CNY"]);
-                
-                if (rate > 1) {
-                    line = `${target[1]} 1${cnySource[0]}兑${roundNumber(rate * q, digits)}${
-                        target[0]
+                let cny = roundNumber(cnyRate / rate , digits)
+                line = `${target[1]} 1${target[0]}兑${cny}${
+                        source[0]
                     }\n`;
-                } else {
-                    line = `${target[1]} 1${target[0]}兑${roundNumber(1 / rate * q, digits)}${
-                        cnySource[0]
-                    }\n`;
-                }
             }
             return accumulator + line;
         }, "");
