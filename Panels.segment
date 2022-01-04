@@ -95,7 +95,7 @@ groupPanelPrimeVideo = type=generic,timeout=10,script-path=https://raw.githubuse
 groupPanelSpotify = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=headphones.circle&color=#86abee&group=Spotify
 
 # PayPal 策略组
-groupPanelPayPal = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=ollarsign.squa&color=#86abee&group=PayPal
+groupPanelPayPal = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=dollarsign.circle&color=#86abee&group=PayPal
 
 # Twitter 策略组
 groupPanelTwitter = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=heart.text.square&color=#86abee&group=Twitter
