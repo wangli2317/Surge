@@ -15,7 +15,10 @@ TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content
 net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel,update-interval=3600
 
 # Disney+策略组自动控制
-DisneySelect = script-name=DisneySelecter, update-interval=3600
+DisneyController = script-name=DisneyController, update-interval=600 
+
+# Netflix策略组自动控制
+NetflixController = script-name=NetflixController, update-interval=600 
 
 # YouTube
 YouTubeController = script-name=YouTubeController, update-interval=600
@@ -44,6 +47,13 @@ DisneyController = type=generic, script-path=https://raw.githubusercontent.com/f
 DisneyChecker = type=cron,cronexp=13 0-23/4 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneychecker.js,script-update-interval=86400,control-api=1
 #捷径执行
 DisneyShortcut = type=cron,cronexp=5 0 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneyshortcut.js,script-update-interval=86400,control-api=1
+
+# Netflix策略组控制
+#应该修改的字段 netflixGroup
+NetflixController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixcontroller.js, timeout=3600, argument=icon1=checkmark.circle&color1=55ba94&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=Netflix
+NetflixChecker = type=cron,cronexp=10 * * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixchecker.js,script-update-interval=86400,control-api=1
+#捷径执行
+NetflixShortcut = type=cron,cronexp=5 * 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixshortcut.js,script-update-interval=86400,control-api=1
 
 # Youtube策略组控制
 #必须更改的字段 YouTubeGroup 填写你Youtube策略组名称
