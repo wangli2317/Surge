@@ -29,11 +29,20 @@ YouTubeController = script-name=YouTubeController, update-interval=600
 # Apple
 groupPanel= script-name=groupPanelApple,update-interval=5
 
+# Google
+groupPanel= script-name=groupPanelGoogle,update-interval=5
+
 # Prime Video
 groupPanel= script-name=groupPanelPrimeVideo,update-interval=5
 
 # Spotify
 groupPanel= script-name=groupPanelSpotify,update-interval=5
+
+# PayPal
+groupPanel= script-name=groupPanelPayPal,update-interval=5
+
+# Twitter
+groupPanel= script-name=groupPanelTwitter,update-interval=5
 
 [Script]
 # 网络状态
@@ -76,11 +85,20 @@ YouTubeShortcut = type=cron,cronexp=5 0 31 1 2000,wake-system=0,timeout=3600,scr
 # Apple 策略组
 groupPanelApple = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=homepodmini.and.appletv&color=#86abee&group=Apple
 
+# Google 策略组
+groupPanelGoogle = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=doc.text.magnifyingglass&color=#86abee&group=Google
+
 # Prime Video 策略组
 groupPanelPrimeVideo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=4k.tv&color=#86abee&group=Prime Video
 
 # Spotify 策略组
 groupPanelSpotify = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=headphones.circle&color=#86abee&group=Spotify
+
+# PayPal 策略组
+groupPanelPayPal = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=ollarsign.squa&color=#86abee&group=PayPal
+
+# Twitter 策略组
+groupPanelTwitter = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=heart.text.square&color=#86abee&group=Twitter
 
 # 刷新DNS
 刷新DNS = type=generic, timeout=3, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=刷新DNS缓存&icon=repeat.circle.fill&color=#FF9F0A&server=false
