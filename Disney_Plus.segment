@@ -1,3 +1,6 @@
+#!name=Disney Plus自动选择
+#!desc=通过panel显示及控制Disney策略组
+
 [Panel]
 #Desney Plus策略组自动控制
 DisneySelect = script-name=DisneySelecter, update-interval=3600
