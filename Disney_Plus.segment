@@ -1,0 +1,10 @@
+[Panel]
+#Desney Plus策略组自动控制
+DisneySelect = script-name=DisneySelecter, update-interval=3600
+
+[Script]
+#disney+策略组控制
+#应当修改的字段 disneyGroup Disney+的策略组名称
+#详情请阅读：https://github.com/fishingworld/something/tree/main/DisneySelect
+DisneySelecter = type=🇸🇬 新加坡手动, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_selecter.js, argument=icon1=checkmark.circle&color1=#55ba94&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=Disney+
+DisneyChecker = type=cron,cronexp=35 4 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disney_checker.js,script-update-interval=86400,control-api=1
