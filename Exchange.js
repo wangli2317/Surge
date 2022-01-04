@@ -34,8 +34,8 @@ $.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=3d08ca4e5e
             if (key !== base && data.rates.hasOwnProperty(key)) {
                 const rate = parseFloat(data.rates[key]);
                 const target = currencyNames[key];
-                let cny = roundNumber(cnyRate / rate , digits)
-                line = `${target[1]} 1${target[0]}兑${cny}${
+                let cny = roundNumber(cnyRate / rate *100, digits)
+                line = `${target[1]} 100${target[0]}兑${cny}${
                         source[0]
                     }\n`;
             }
