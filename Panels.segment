@@ -14,6 +14,9 @@ TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content
 # 网络状态
 net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel,update-interval=3600
 
+# 刷新DNS
+刷新DNS = script-name=刷新DNS, update-interval=1
+
 # Disney+策略组自动控制
 DisneyController = script-name=DisneyController, update-interval=600 
 
@@ -72,3 +75,6 @@ groupPanelApple = type=generic,timeout=10,script-path=https://raw.githubusercont
 
 # Prime Video 策略组
 groupPanelPrimeVideo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=4k.tv&color=#86abee&group=Prime Video
+
+# 刷新DNS
+刷新DNS = type=generic, timeout=3, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=刷新DNS缓存&icon=repeat.circle.fill&color=#FF9F0A&server=false
