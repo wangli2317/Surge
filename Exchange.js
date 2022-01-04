@@ -27,26 +27,29 @@ $.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=3d08ca4e5e
     .then((response) => {
         const data = JSON.parse(response.body);
         const source = currencyNames[base];
+        const cnySource = currencyNames["CNY"];
     
         const info = Object.keys(currencyNames).reduce((accumulator, key) => {
             let line = "";
             if (key !== base && data.rates.hasOwnProperty(key)) {
                 const rate = parseFloat(data.rates[key]);
                 const target = currencyNames[key];
+                let q = parseFloat(data.rates["CNY"]);
+                
                 if (rate > 1) {
-                    line = `${target[1]} 1${source[0]}兑${roundNumber(rate, digits)}${
+                    line = `${target[1]} 1${cnySource[0]}兑${roundNumber(rate * q, digits)}${
                         target[0]
                     }\n`;
                 } else {
-                    line = `${target[1]} 1${target[0]}兑${roundNumber(1 / rate, digits)}${
-                        source[0]
+                    line = `${target[1]} 1${target[0]}兑${roundNumber(1 / rate * q, digits)}${
+                        cnySource[0]
                     }\n`;
                 }
             }
             return accumulator + line;
         }, "");
         $.notify(
-            `[今日汇率] 基准：${source[1]} ${source[0]}`,
+            `[今日汇率] 基准：${cnySource[1]} ${cnySource[0]}`,
             `⏰ 更新时间：${data.date}`,
             `📈 汇率情况：\n${info}`
         );
