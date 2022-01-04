@@ -32,6 +32,9 @@ groupPanel= script-name=groupPanelApple,update-interval=5
 # Prime Video
 groupPanel= script-name=groupPanelPrimeVideo,update-interval=5
 
+# Spotify
+groupPanel= script-name=groupPanelSpotify,update-interval=5
+
 [Script]
 # 网络状态
 net-info-panel=script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/Panels/NetInfo/net-info-panel.js,type=generic
@@ -75,6 +78,9 @@ groupPanelApple = type=generic,timeout=10,script-path=https://raw.githubusercont
 
 # Prime Video 策略组
 groupPanelPrimeVideo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=4k.tv&color=#86abee&group=Prime Video
+
+# Spotify 策略组
+groupPanelSpotify = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=headphones.circle&color=#86abee&group=Spotify
 
 # 刷新DNS
 刷新DNS = type=generic, timeout=3, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=刷新DNS缓存&icon=repeat.circle.fill&color=#FF9F0A&server=false
