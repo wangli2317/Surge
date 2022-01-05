@@ -1,5 +1,5 @@
 #!name=今日汇率
-#!desc=今日汇率
+#!desc=汇率变化
 
 [Script]
 今日汇率 = script-path=https://raw.githubusercontent.com/wangli2317/Surge/main/Exchange.js,script-update-interval=3600,timeout=120,type=cron,cronexp=27 9 * * *
