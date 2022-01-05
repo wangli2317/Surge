@@ -2,4 +2,4 @@
 #!desc=今日汇率
 
 [Script]
-今日汇率 = script-path=https://raw.githubusercontent.com/wangli2317/Surge/main/Exchange.js,script-update-interval=3600,timeout=120,type=cron,cronexp=25 9 * * *
+今日汇率 = script-path=https://raw.githubusercontent.com/wangli2317/Surge/main/Exchange.js,script-update-interval=3600,timeout=120,type=cron,cronexp=0 10 * * *
