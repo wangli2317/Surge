@@ -12,7 +12,7 @@ timecard = script-name=timecard,update-interval=36000
 TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content="请刷新", update-interval=1
 
 # 网络状态
-net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel,update-interval=3600
+net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel,update-interval=600
 
 # 刷新DNS
 刷新DNS = script-name=刷新DNS, update-interval=1
