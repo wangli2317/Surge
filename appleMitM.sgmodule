@@ -1,0 +1,5 @@
+#!name=MitM Apple
+#!desc=此域名与Apple Store登录、验证、购买等功能共用，MitM可能会造成无法访问，故建议仅在需要时开启
+
+[MITM]
+hostname = %APPEND% play.itunes.apple.com
