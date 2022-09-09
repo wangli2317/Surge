@@ -1,3 +1,6 @@
+#!name=Notability
+#!desc=Notability模块
+
 [MITM]
 hostname = %APPEND% notability.com
 
