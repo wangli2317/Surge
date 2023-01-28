@@ -5,3 +5,6 @@ cytq = type=http-response,pattern=^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)
 
 [MITM]
 hostname= %APPEND% *.caiyunapp.*,*cyapi*
+
+[URL Rewrite]
+^https:\/\/ad\.caiyunapp\.com\/ _ reject
