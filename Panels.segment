@@ -14,9 +14,6 @@ TrafficStatistics = script-name=TrafficStatistics, title="流量统计", content
 # 网络状态
 net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel,update-interval=600
 
-# 刷新DNS
-刷新DNS = script-name=刷新DNS, update-interval=1
-
 # Apple
 groupPanel= script-name=groupPanelApple,update-interval=5
 
@@ -69,6 +66,3 @@ groupPanelPayPal = type=generic,timeout=10,script-path=https://raw.githubusercon
 
 # Twitter 策略组
 groupPanelTwitter = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js ,argument=icon=heart.text.square&color=#86abee&group=Twitter
-
-# 刷新DNS
-刷新DNS = type=generic, timeout=3, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=刷新DNS缓存&icon=repeat.circle.fill&color=#FF9F0A&server=false
