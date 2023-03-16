@@ -1,4 +1,4 @@
-# > Spotify
+# > Spotify https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Music/Spotify.list
 {% macro main(rule) %}
 USER-AGENT,Spotify*
 DOMAIN-SUFFIX,pscdn.co
