@@ -1,4 +1,4 @@
-# > Twitter
+# > Twitter https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Twitter.list
 {% macro main(rule) %}
 DOMAIN-SUFFIX,pscp.tv,{{ rule }}
 DOMAIN-SUFFIX,periscope.tv,{{ rule }}
