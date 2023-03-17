@@ -10,5 +10,6 @@ DOMAIN,audio.itunes.apple.com,{{ rule }}
 DOMAIN,audio-ssl.itunes.apple.com,{{ rule }}
 DOMAIN,mvod.itunes.apple.com,{{ rule }}
 DOMAIN,streamingaudio.itunes.apple.com,{{ rule }}
-DOMAIN-SUFFIX,blobstore.apple.com,{{ rule }} // iCloud Music Library
+// iCloud Music Library
+DOMAIN-SUFFIX,blobstore.apple.com,{{ rule }} 
 {% endmacro %}
